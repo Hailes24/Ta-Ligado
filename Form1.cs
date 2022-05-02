@@ -18,12 +18,15 @@ namespace TaLigado
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 2;
+            panel2.Width += new Random().Next(1, 10);
             if (panel2.Width >= panel1.Width)
             {
                 timer1.Stop();
-                Application.Restart();
+                this.Hide();
+                new Main().ShowDialog();
             }
+            else if (panel2.Width == new Random().Next(16, 330))
+                panel2.Width -= 35;
         }
         private void panel3_Click(object sender, EventArgs e) => Application.Exit(); 
     }

@@ -22,7 +22,6 @@ C:\Users\HP\Documents\GitHub\Ta-Ligado\bin\Debug\netcoreapp3.1\DevExpress.XtraVe
 C:\Users\HP\Documents\GitHub\Ta-Ligado\bin\Debug\netcoreapp3.1\DevExpress.XtraPrinting.v21.2.xml
 C:\Users\HP\Documents\GitHub\Ta-Ligado\bin\Debug\netcoreapp3.1\DevExpress.XtraLayout.v21.2.xml
 C:\Users\HP\Documents\GitHub\Ta-Ligado\bin\Debug\netcoreapp3.1\DevExpress.XtraTreeList.v21.2.xml
-C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.csproj.AssemblyReference.cache
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Form1.resources
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.csproj.GenerateResource.cache
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.GeneratedMSBuildEditorConfig.editorconfig
@@ -34,3 +33,5 @@ C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.dll
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.pdb
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.genruntimeconfig.cache
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Main.resources
+C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.csproj.AssemblyReference.cache

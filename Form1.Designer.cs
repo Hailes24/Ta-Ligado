@@ -96,13 +96,13 @@ namespace TaLigado
             this.label2.ForeColor = System.Drawing.Color.Lavender;
             this.label2.Location = new System.Drawing.Point(12, 285);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 12);
+            this.label2.Size = new System.Drawing.Size(126, 12);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Created By Hailes Maurício";
+            this.label2.Text = "<Created By Hailes Maurício/>";
             // 
             // timer1
             // 
-            this.timer1.Interval = 30;
+            this.timer1.Interval = 120;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
