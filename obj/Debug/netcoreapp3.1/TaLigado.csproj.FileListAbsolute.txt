@@ -33,3 +33,4 @@ C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.csproj.C
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.dll
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.pdb
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.genruntimeconfig.cache
+C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Properties.Resources.resources
