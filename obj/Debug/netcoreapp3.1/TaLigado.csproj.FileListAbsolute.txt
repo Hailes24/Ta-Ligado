@@ -35,3 +35,5 @@ C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.genrunti
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Properties.Resources.resources
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Main.resources
 C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Controles.UserControlBlocoVacio.resources
+C:\Users\HP\Documents\GitHub\Ta-Ligado\obj\Debug\netcoreapp3.1\TaLigado.Controles.UserControlDay.resources
