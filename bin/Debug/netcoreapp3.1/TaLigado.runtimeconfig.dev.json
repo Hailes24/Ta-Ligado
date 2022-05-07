@@ -2,8 +2,7 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\HP\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\HP\\.nuget\\packages",
-      "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
+      "C:\\Users\\HP\\.nuget\\packages"
     ]
   }
 }
