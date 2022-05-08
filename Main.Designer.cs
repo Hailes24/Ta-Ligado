@@ -40,8 +40,8 @@ namespace TaLigado
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.previusMonth = new System.Windows.Forms.Button();
+            this.nextMonth = new System.Windows.Forms.Button();
             this.lblMes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -162,33 +162,35 @@ namespace TaLigado
             this.label7.TabIndex = 8;
             this.label7.Text = "Sábado";
             // 
-            // button1
+            // previusMonth
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(504, 404);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 23);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.previusMonth.BackColor = System.Drawing.Color.Black;
+            this.previusMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("previusMonth.BackgroundImage")));
+            this.previusMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.previusMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previusMonth.FlatAppearance.BorderSize = 0;
+            this.previusMonth.Location = new System.Drawing.Point(504, 404);
+            this.previusMonth.Margin = new System.Windows.Forms.Padding(0);
+            this.previusMonth.Name = "previusMonth";
+            this.previusMonth.Size = new System.Drawing.Size(45, 23);
+            this.previusMonth.TabIndex = 9;
+            this.previusMonth.UseVisualStyleBackColor = true;
+            this.previusMonth.Click += new System.EventHandler(this.previusMonth_Click);
             // 
-            // button2
+            // nextMonth
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(558, 404);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 23);
-            this.button2.TabIndex = 10;
-            this.button2.UseVisualStyleBackColor = true;
+            this.nextMonth.BackColor = System.Drawing.Color.Black;
+            this.nextMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextMonth.BackgroundImage")));
+            this.nextMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.nextMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextMonth.FlatAppearance.BorderSize = 0;
+            this.nextMonth.Location = new System.Drawing.Point(558, 404);
+            this.nextMonth.Margin = new System.Windows.Forms.Padding(0);
+            this.nextMonth.Name = "nextMonth";
+            this.nextMonth.Size = new System.Drawing.Size(45, 23);
+            this.nextMonth.TabIndex = 10;
+            this.nextMonth.UseVisualStyleBackColor = true;
+            this.nextMonth.Click += new System.EventHandler(this.nextMonth_Click);
             // 
             // lblMes
             // 
@@ -200,6 +202,7 @@ namespace TaLigado
             this.lblMes.Size = new System.Drawing.Size(97, 30);
             this.lblMes.TabIndex = 11;
             this.lblMes.Text = "JANEIRO";
+            this.lblMes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -246,8 +249,8 @@ namespace TaLigado
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblMes);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.nextMonth);
+            this.Controls.Add(this.previusMonth);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -260,6 +263,7 @@ namespace TaLigado
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
@@ -283,8 +287,8 @@ namespace TaLigado
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button previusMonth;
+        private System.Windows.Forms.Button nextMonth;
         private System.Windows.Forms.Label lblMes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
