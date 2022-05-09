@@ -43,11 +43,11 @@ namespace TaLigado.Controles
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -62,7 +62,7 @@ namespace TaLigado.Controles
             this.imprimirToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 92);
             // 
             // agendarToolStripMenuItem
             // 
@@ -70,7 +70,7 @@ namespace TaLigado.Controles
             this.agendarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agendarToolStripMenuItem.Image")));
             this.agendarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.agendarToolStripMenuItem.Name = "agendarToolStripMenuItem";
-            this.agendarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agendarToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.agendarToolStripMenuItem.Text = "Novo Evento";
             this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
             // 
@@ -79,7 +79,7 @@ namespace TaLigado.Controles
             this.limparEventosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.limparEventosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("limparEventosToolStripMenuItem.Image")));
             this.limparEventosToolStripMenuItem.Name = "limparEventosToolStripMenuItem";
-            this.limparEventosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.limparEventosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.limparEventosToolStripMenuItem.Text = "Limpar Eventos";
             // 
             // visualizarToolStripMenuItem
@@ -87,7 +87,7 @@ namespace TaLigado.Controles
             this.visualizarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.visualizarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("visualizarToolStripMenuItem.Image")));
             this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.visualizarToolStripMenuItem.Text = "Visualizar";
             // 
             // imprimirToolStripMenuItem
@@ -95,7 +95,7 @@ namespace TaLigado.Controles
             this.imprimirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.imprimirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("imprimirToolStripMenuItem.Image")));
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // UserControlDay
