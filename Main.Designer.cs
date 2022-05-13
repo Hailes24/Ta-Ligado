@@ -46,6 +46,7 @@ namespace TaLigado
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAno = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,7 +185,7 @@ namespace TaLigado
             this.nextMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.nextMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nextMonth.FlatAppearance.BorderSize = 0;
-            this.nextMonth.Location = new System.Drawing.Point(558, 404);
+            this.nextMonth.Location = new System.Drawing.Point(613, 404);
             this.nextMonth.Margin = new System.Windows.Forms.Padding(0);
             this.nextMonth.Name = "nextMonth";
             this.nextMonth.Size = new System.Drawing.Size(45, 23);
@@ -239,12 +240,28 @@ namespace TaLigado
             this.lblAno.Text = "2022";
             this.lblAno.Click += new System.EventHandler(this.label10_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(558, 404);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 23);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(934, 545);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblAno);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
@@ -293,5 +310,6 @@ namespace TaLigado
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblAno;
+        private System.Windows.Forms.Button button1;
     }
 }

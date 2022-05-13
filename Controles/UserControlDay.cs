@@ -10,9 +10,11 @@ namespace TaLigado.Controles
 {
     public partial class UserControlDay : UserControl
     {
-        public UserControlDay()
+        public (byte dia, byte mes, short ano) data;
+        public UserControlDay(byte day, byte month, short year)
         {
             InitializeComponent();
+            data = (day, month, year);
         }
 
         private void UserControlDay_Load(object sender, EventArgs e)

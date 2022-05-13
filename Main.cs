@@ -26,6 +26,37 @@ namespace TaLigado
             contMonth = (byte)dataActual.Month;
             lblMes.Text = GetMes((byte)dataActual.Month);
             Preencher(dataActual.Month);
+            selecionarDataActual();
+        }
+        private void Main_Load()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            dataActual = DateTime.Today;
+            lblAno.Text = dataActual.Year.ToString();
+            contMonth = (byte)dataActual.Month;
+            lblMes.Text = GetMes((byte)dataActual.Month);
+            Preencher(dataActual.Month);
+            selecionarDataActual();
+        }
+
+        private void selecionarDataActual()
+        {
+            var controlHoje = new UserControlDay((byte)dataActual.Day, (byte)dataActual.Month, (short)dataActual.Year);
+            for (short i = 0; i < flowLayoutPanel1.Controls.Count; i++)
+            {
+                var check = flowLayoutPanel1.Controls[i].GetType().Equals((controlHoje.GetType())) ? true : false;
+                if (check)
+                {
+                    var refer = (UserControlDay)flowLayoutPanel1.Controls[i];
+                    if (refer.data == controlHoje.data)
+                    {
+                        var corAux = refer.BackColor;
+                        refer.BackColor = refer.label1.ForeColor;
+                        refer.label1.ForeColor = corAux;
+                        break;
+                    }
+                }
+            }
         }
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
@@ -47,7 +78,7 @@ namespace TaLigado
             for (byte i = 1; i < diaSemana; i++)
                 flowLayoutPanel1.Controls.Add(new UserControlBlocoVacio());
             for (byte i = 1; i <= diasMes; i++)
-                flowLayoutPanel1.Controls.Add(new UserControlDay().setDay(i));
+                flowLayoutPanel1.Controls.Add(new UserControlDay(day: i, month: contMonth, year: (short)dataActual.Year).setDay(i));
 
         }
         private string GetMes(byte mes)
@@ -85,5 +116,7 @@ namespace TaLigado
             lblMes.Text = GetMes((byte)monthFocado);
             Preencher(monthFocado);
         }
+
+        private void button1_Click(object sender, EventArgs e) => Main_Load();
     }
 }
