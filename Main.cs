@@ -27,6 +27,7 @@ namespace TaLigado
             lblMes.Text = GetMes((byte)dataActual.Month);
             Preencher(dataActual.Month);
             selecionarDataActual();
+            checkTime();
         }
         private void Main_Load()
         {
@@ -37,6 +38,7 @@ namespace TaLigado
             lblMes.Text = GetMes((byte)dataActual.Month);
             Preencher(dataActual.Month);
             selecionarDataActual();
+            checkTime();
         }
         private void selecionarDataActual()
         {
@@ -101,6 +103,11 @@ namespace TaLigado
             var monthFocado = --contMonth;
             lblMes.Text = GetMes((byte)monthFocado);
             Preencher(monthFocado);
+        }
+        private void checkTime()
+        {
+            var hora = DateTime.Now.Hour;
+            flowLayoutPanel2.BackgroundImage = (hora < 18 && hora > 5)? Properties.Resources.icons8_partly_cloudy_day_32: Properties.Resources.icons8_night_32;
         }
         private void button1_Click(object sender, EventArgs e) => Main_Load();
         private void pictureBox2_Click(object sender, EventArgs e) => Application.Exit();

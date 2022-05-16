@@ -89,7 +89,7 @@ namespace TaLigado.Controles
             this.agendarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agendarToolStripMenuItem.Text = "Novo";
             this.agendarToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
+            //this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
             // 
             // limparEventosToolStripMenuItem
             // 
@@ -143,7 +143,7 @@ namespace TaLigado.Controles
             this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
             this.eventoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eventoToolStripMenuItem.Text = "Lembrete";
-            this.eventoToolStripMenuItem.Click += new System.EventHandler(this.eventoToolStripMenuItem_Click);
+            //this.eventoToolStripMenuItem.Click += new System.EventHandler(this.eventoToolStripMenuItem_Click);
             // 
             // lembreteToolStripMenuItem
             // 
@@ -225,9 +225,9 @@ namespace TaLigado.Controles
             this.Controls.Add(this.label1);
             this.Name = "UserControlDay";
             this.Size = new System.Drawing.Size(99, 49);
-            this.Load += new System.EventHandler(this.UserControlDay_Load);
-            this.Click += new System.EventHandler(this.UserControlDay_Click);
-            this.DoubleClick += new System.EventHandler(this.UserControlDay_DoubleClick);
+            //this.Load += new System.EventHandler(this.UserControlDay_Load);
+            //this.Click += new System.EventHandler(this.UserControlDay_Click);
+            //this.DoubleClick += new System.EventHandler(this.UserControlDay_DoubleClick);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UserControlDay_MouseClick);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);

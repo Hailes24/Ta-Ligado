@@ -50,6 +50,7 @@ namespace TaLigado
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,7 +65,6 @@ namespace TaLigado
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(736, 336);
             this.flowLayoutPanel1.TabIndex = 0;
-            //this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // groupBox1
             // 
@@ -72,7 +72,7 @@ namespace TaLigado
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(186, 430);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(736, 103);
+            this.groupBox1.Size = new System.Drawing.Size(736, 129);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -89,12 +89,13 @@ namespace TaLigado
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(730, 81);
+            this.dataGridView1.Size = new System.Drawing.Size(730, 107);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(189, 21);
@@ -106,6 +107,7 @@ namespace TaLigado
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(299, 21);
@@ -117,6 +119,7 @@ namespace TaLigado
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(413, 21);
@@ -128,6 +131,7 @@ namespace TaLigado
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(515, 21);
@@ -139,6 +143,7 @@ namespace TaLigado
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(620, 21);
@@ -150,6 +155,7 @@ namespace TaLigado
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(725, 21);
@@ -161,6 +167,7 @@ namespace TaLigado
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(836, 21);
@@ -202,7 +209,7 @@ namespace TaLigado
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(70, 470);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 479);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -215,7 +222,7 @@ namespace TaLigado
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Lavender;
-            this.label9.Location = new System.Drawing.Point(22, 492);
+            this.label9.Location = new System.Drawing.Point(22, 501);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 38);
             this.label9.TabIndex = 12;
@@ -224,15 +231,13 @@ namespace TaLigado
             // lblAno
             // 
             this.lblAno.AutoSize = true;
-            this.lblAno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAno.Font = new System.Drawing.Font("Yu Gothic UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAno.ForeColor = System.Drawing.Color.White;
             this.lblAno.Location = new System.Drawing.Point(24, 64);
             this.lblAno.Name = "lblAno";
-            this.lblAno.Size = new System.Drawing.Size(134, 67);
+            this.lblAno.Size = new System.Drawing.Size(132, 65);
             this.lblAno.TabIndex = 14;
             this.lblAno.Text = "2022";
-            //this.lblAno.Click += new System.EventHandler(this.label10_Click);
             // 
             // button1
             // 
@@ -252,14 +257,14 @@ namespace TaLigado
             // lblMes
             // 
             this.lblMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.lblMes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblMes.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMes.ForeColor = System.Drawing.Color.White;
             this.lblMes.HideSelection = false;
             this.lblMes.Location = new System.Drawing.Point(24, 134);
             this.lblMes.Name = "lblMes";
             this.lblMes.ReadOnly = true;
-            this.lblMes.Size = new System.Drawing.Size(134, 35);
+            this.lblMes.Size = new System.Drawing.Size(134, 28);
             this.lblMes.TabIndex = 0;
             this.lblMes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -302,12 +307,21 @@ namespace TaLigado
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 168);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(159, 222);
+            this.flowLayoutPanel2.TabIndex = 19;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(934, 545);
+            this.ClientSize = new System.Drawing.Size(934, 571);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -368,5 +382,6 @@ namespace TaLigado
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
