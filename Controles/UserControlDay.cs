@@ -46,14 +46,16 @@ namespace TaLigado.Controles
 
         private void UserControlDay_MouseClick(object sender, MouseEventArgs e)
         {
+            var varCor = this.BackColor;
+            var varCorII = this.label1.ForeColor;
             var obj = (UserControlDay)sender;
+            if (obj.BackColor.Name.Equals("White"))
+                return;
             if (e.Button == MouseButtons.Right)
                 contextMenuStrip1.Show(PointToScreen(e.Location));
             else if (e.Button == MouseButtons.Left)
             {
                 var form = Application.OpenForms["Main"] as Main;
-                var varCor = this.BackColor;
-                var varCorII = this.label1.ForeColor;
                 foreach (Control item in form.flowLayoutPanel1.Controls)
                 {
                     var check = item.GetType().Equals(((UserControlDay)sender).GetType()) ? true : false;
@@ -72,6 +74,11 @@ namespace TaLigado.Controles
                     }
                 }
             }
+        }
+
+        private void eventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

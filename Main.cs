@@ -38,7 +38,6 @@ namespace TaLigado
             Preencher(dataActual.Month);
             selecionarDataActual();
         }
-
         private void selecionarDataActual()
         {
             var controlHoje = new UserControlDay((byte)dataActual.Day, (byte)dataActual.Month, (short)dataActual.Year);
@@ -53,23 +52,13 @@ namespace TaLigado
                         var corAux = refer.BackColor;
                         refer.BackColor = refer.label1.ForeColor;
                         refer.label1.ForeColor = corAux;
+                        refer.Select();
                         break;
                     }
                 }
             }
         }
-
         private void Main_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Preencher(int month)
         {
             var diasMes = DateTime.DaysInMonth(dataActual.Year, month);
@@ -79,7 +68,6 @@ namespace TaLigado
                 flowLayoutPanel1.Controls.Add(new UserControlBlocoVacio());
             for (byte i = 1; i <= diasMes; i++)
                 flowLayoutPanel1.Controls.Add(new UserControlDay(day: i, month: contMonth, year: (short)dataActual.Year).setDay(i));
-
         }
         private string GetMes(byte mes)
         {
@@ -100,7 +88,6 @@ namespace TaLigado
                 default: return "";
             }
         }
-
         private void nextMonth_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -108,7 +95,6 @@ namespace TaLigado
             lblMes.Text = GetMes((byte)monthFocado);
             Preencher(monthFocado);
         }
-
         private void previusMonth_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -116,7 +102,9 @@ namespace TaLigado
             lblMes.Text = GetMes((byte)monthFocado);
             Preencher(monthFocado);
         }
-
         private void button1_Click(object sender, EventArgs e) => Main_Load();
+        private void pictureBox2_Click(object sender, EventArgs e) => Application.Exit();
+        private void pictureBox4_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
+        private void pictureBox3_Click(object sender, EventArgs e) => this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
     }
 }
