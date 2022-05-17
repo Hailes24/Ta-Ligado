@@ -12,7 +12,8 @@ namespace TaLigado
 {
     public partial class Main : Form
     {
-        DateTime dataActual;
+        private DateTime dataActual;
+        private byte contMonth = 0;
         public Main()
         {
             InitializeComponent();
@@ -22,31 +23,53 @@ namespace TaLigado
         {
             dataActual = DateTime.Today;
             lblAno.Text = dataActual.Year.ToString();
+            contMonth = (byte)dataActual.Month;
             lblMes.Text = GetMes((byte)dataActual.Month);
-            Preencher();
+            Preencher(dataActual.Month);
+            selecionarDataActual();
+            checkTime();
         }
-
+        private void Main_Load()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            dataActual = DateTime.Today;
+            lblAno.Text = dataActual.Year.ToString();
+            contMonth = (byte)dataActual.Month;
+            lblMes.Text = GetMes((byte)dataActual.Month);
+            Preencher(dataActual.Month);
+            selecionarDataActual();
+            checkTime();
+        }
+        private void selecionarDataActual()
+        {
+            var controlHoje = new UserControlDay((byte)dataActual.Day, (byte)dataActual.Month, (short)dataActual.Year);
+            for (short i = 0; i < flowLayoutPanel1.Controls.Count; i++)
+            {
+                var check = flowLayoutPanel1.Controls[i].GetType().Equals((controlHoje.GetType())) ? true : false;
+                if (check)
+                {
+                    var refer = (UserControlDay)flowLayoutPanel1.Controls[i];
+                    if (refer.data == controlHoje.data)
+                    {
+                        var corAux = refer.BackColor;
+                        refer.BackColor = refer.label1.ForeColor;
+                        refer.label1.ForeColor = corAux;
+                        refer.Select();
+                        break;
+                    }
+                }
+            }
+        }
         private void Main_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Preencher(int month)
         {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Preencher()
-        {
-            var diasMes = DateTime.DaysInMonth(dataActual.Year, dataActual.Month);
-            DateTime dataIncicioMes = new DateTime(dataActual.Year, dataActual.Month, 1);
+            var diasMes = DateTime.DaysInMonth(dataActual.Year, month);
+            DateTime dataIncicioMes = new DateTime(dataActual.Year, month, 1);
             var diaSemana = Convert.ToInt32(dataIncicioMes.DayOfWeek.ToString("d")) + 1;
             for (byte i = 1; i < diaSemana; i++)
                 flowLayoutPanel1.Controls.Add(new UserControlBlocoVacio());
             for (byte i = 1; i <= diasMes; i++)
-                flowLayoutPanel1.Controls.Add(new UserControlDay().setDay(i));
-
+                flowLayoutPanel1.Controls.Add(new UserControlDay(day: i, month: contMonth, year: (short)dataActual.Year).setDay(i));
         }
         private string GetMes(byte mes)
         {
@@ -67,6 +90,28 @@ namespace TaLigado
                 default: return "";
             }
         }
-
+        private void nextMonth_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            var monthFocado = ++contMonth;
+            lblMes.Text = GetMes((byte)monthFocado);
+            Preencher(monthFocado);
+        }
+        private void previusMonth_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            var monthFocado = --contMonth;
+            lblMes.Text = GetMes((byte)monthFocado);
+            Preencher(monthFocado);
+        }
+        private void checkTime()
+        {
+            var hora = DateTime.Now.Hour;
+            flowLayoutPanel2.BackgroundImage = (hora < 18 && hora > 5)? Properties.Resources.icons8_partly_cloudy_day_32: Properties.Resources.icons8_night_32;
+        }
+        private void button1_Click(object sender, EventArgs e) => Main_Load();
+        private void pictureBox2_Click(object sender, EventArgs e) => Application.Exit();
+        private void pictureBox4_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
+        private void pictureBox3_Click(object sender, EventArgs e) => this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
     }
 }
