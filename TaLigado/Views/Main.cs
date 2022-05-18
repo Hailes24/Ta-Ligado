@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 using TaLigado.Controles;
 
 namespace TaLigado
@@ -21,6 +22,9 @@ namespace TaLigado
 
         private void Main_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < 100; i++)
+                Thread.Sleep(100);
+
             dataActual = DateTime.Today;
             lblAno.Text = dataActual.Year.ToString();
             contMonth = (byte)dataActual.Month;

@@ -30,6 +30,7 @@ namespace TaLigado
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TaLigado.SplashScreen1), true, false, true);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -314,6 +315,10 @@ namespace TaLigado
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(136, 192);
             this.flowLayoutPanel2.TabIndex = 19;
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 40;
             // 
             // Main
             // 

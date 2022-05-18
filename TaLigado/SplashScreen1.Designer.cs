@@ -42,7 +42,7 @@ namespace TaLigado
             // 
             // progressBarControl
             // 
-            this.progressBarControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.progressBarControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBarControl.EditValue = 0;
             this.progressBarControl.Location = new System.Drawing.Point(24, 232);
@@ -55,18 +55,18 @@ namespace TaLigado
             this.labelCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelCopyright.Location = new System.Drawing.Point(24, 287);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(47, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(147, 13);
             this.labelCopyright.TabIndex = 6;
-            this.labelCopyright.Text = "Copyright";
+            this.labelCopyright.Text = "<Created By Hailes Maurício/>";
             // 
             // labelStatus
             // 
             this.labelStatus.Location = new System.Drawing.Point(24, 215);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(3, 3, 3, 1);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(50, 13);
+            this.labelStatus.Size = new System.Drawing.Size(55, 13);
             this.labelStatus.TabIndex = 7;
-            this.labelStatus.Text = "Starting...";
+            this.labelStatus.Text = "Iniciando...";
             // 
             // peImage
             // 
@@ -86,7 +86,7 @@ namespace TaLigado
             // 
             // peLogo
             // 
-            this.peLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.peLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.peLogo.EditValue = ((object)(resources.GetObject("peLogo.EditValue")));
             this.peLogo.Location = new System.Drawing.Point(279, 267);
