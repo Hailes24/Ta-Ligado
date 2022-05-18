@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaLigado", "TaLigado.csproj", "{1E7A757A-1EE0-47F5-B804-CBD8C7952B92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaLigado", "TaLigado\TaLigado.csproj", "{1B3FF929-F02C-43DD-9B79-DB040FB3F7D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E7A757A-1EE0-47F5-B804-CBD8C7952B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E7A757A-1EE0-47F5-B804-CBD8C7952B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E7A757A-1EE0-47F5-B804-CBD8C7952B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E7A757A-1EE0-47F5-B804-CBD8C7952B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3FF929-F02C-43DD-9B79-DB040FB3F7D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3FF929-F02C-43DD-9B79-DB040FB3F7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3FF929-F02C-43DD-9B79-DB040FB3F7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3FF929-F02C-43DD-9B79-DB040FB3F7D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A7F65465-F0D8-4E67-B075-B0798CEFD0DC}
+		SolutionGuid = {94781742-9684-4F4A-8553-56FE276E92E7}
 	EndGlobalSection
 EndGlobal
