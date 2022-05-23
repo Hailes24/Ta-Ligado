@@ -74,6 +74,10 @@
     <Compile Include="Control\UserControlDay.Designer.cs">
       <DependentUpon>UserControlDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Conexao.cs" />
+    <Compile Include="Model\EventoRepository.cs" />
+    <Compile Include="Model\IEvento.cs" />
+    <Compile Include="Model\IGatewayEvento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashScreen1.cs">
@@ -148,9 +152,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_night_32.png" />
   </ItemGroup>
