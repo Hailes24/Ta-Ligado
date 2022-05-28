@@ -9,7 +9,7 @@ namespace TaLigado.Model
 {
     public class EventoRepository : IEvento, IGatewayEvento<IEvento>
     {
-        Conexao Conexao = new Conexao();
+        private Conexao Conexao = new Conexao();
         public string titulo { get ; set ; }
         public string frequencia { get ; set ; }
         public bool repetir { get ; set ; }
