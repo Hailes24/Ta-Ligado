@@ -30,51 +30,51 @@ namespace TaLigado.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarEvento));
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.boxData = new DevExpress.XtraEditors.DateEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.richTxtDescricao = new System.Windows.Forms.RichTextBox();
+            this.txtTitulo = new DevExpress.XtraEditors.TextEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.nextMonth = new System.Windows.Forms.Button();
+            this.txtPessoasEnvolvidas = new DevExpress.XtraEditors.TextEdit();
+            this.plusPessosEnvolvidas = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbBoxFrequencia = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbHora = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtLocalizacao = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPessoasEnvolvidas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbBoxFrequencia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHora.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLocalizacao.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateEdit1
+            // boxData
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(12, 232);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.dateEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.boxData.EditValue = null;
+            this.boxData.Location = new System.Drawing.Point(12, 232);
+            this.boxData.Name = "boxData";
+            this.boxData.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.boxData.Properties.Appearance.Options.UseBackColor = true;
+            this.boxData.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.boxData.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(194, 20);
-            this.dateEdit1.TabIndex = 0;
+            this.boxData.Size = new System.Drawing.Size(194, 20);
+            this.boxData.TabIndex = 0;
             // 
             // label1
             // 
@@ -85,24 +85,24 @@ namespace TaLigado.Views
             this.label1.TabIndex = 1;
             this.label1.Text = "Titulo:";
             // 
-            // richTextBox1
+            // richTxtDescricao
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 71);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(194, 62);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.richTxtDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.richTxtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTxtDescricao.Location = new System.Drawing.Point(12, 71);
+            this.richTxtDescricao.Name = "richTxtDescricao";
+            this.richTxtDescricao.Size = new System.Drawing.Size(194, 62);
+            this.richTxtDescricao.TabIndex = 2;
+            this.richTxtDescricao.Text = "";
             // 
-            // textEdit1
+            // txtTitulo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(12, 31);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Size = new System.Drawing.Size(194, 20);
-            this.textEdit1.TabIndex = 3;
+            this.txtTitulo.Location = new System.Drawing.Point(12, 31);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.txtTitulo.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTitulo.Size = new System.Drawing.Size(194, 20);
+            this.txtTitulo.TabIndex = 3;
             // 
             // checkEdit1
             // 
@@ -124,6 +124,7 @@ namespace TaLigado.Views
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Size = new System.Drawing.Size(194, 61);
             this.pictureEdit1.TabIndex = 6;
+            this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
             // 
             // label2
             // 
@@ -134,28 +135,29 @@ namespace TaLigado.Views
             this.label2.TabIndex = 7;
             this.label2.Text = "Descrição:";
             // 
-            // textEdit3
+            // txtPessoasEnvolvidas
             // 
-            this.textEdit3.Location = new System.Drawing.Point(12, 154);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit3.Size = new System.Drawing.Size(158, 20);
-            this.textEdit3.TabIndex = 8;
+            this.txtPessoasEnvolvidas.Location = new System.Drawing.Point(12, 154);
+            this.txtPessoasEnvolvidas.Name = "txtPessoasEnvolvidas";
+            this.txtPessoasEnvolvidas.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.txtPessoasEnvolvidas.Properties.Appearance.Options.UseBackColor = true;
+            this.txtPessoasEnvolvidas.Size = new System.Drawing.Size(158, 20);
+            this.txtPessoasEnvolvidas.TabIndex = 8;
             // 
-            // nextMonth
+            // plusPessosEnvolvidas
             // 
-            this.nextMonth.BackColor = System.Drawing.Color.Transparent;
-            this.nextMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextMonth.BackgroundImage")));
-            this.nextMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.nextMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextMonth.FlatAppearance.BorderSize = 0;
-            this.nextMonth.Location = new System.Drawing.Point(173, 151);
-            this.nextMonth.Margin = new System.Windows.Forms.Padding(0);
-            this.nextMonth.Name = "nextMonth";
-            this.nextMonth.Size = new System.Drawing.Size(33, 24);
-            this.nextMonth.TabIndex = 11;
-            this.nextMonth.UseVisualStyleBackColor = false;
+            this.plusPessosEnvolvidas.BackColor = System.Drawing.Color.Transparent;
+            this.plusPessosEnvolvidas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("plusPessosEnvolvidas.BackgroundImage")));
+            this.plusPessosEnvolvidas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.plusPessosEnvolvidas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.plusPessosEnvolvidas.FlatAppearance.BorderSize = 0;
+            this.plusPessosEnvolvidas.Location = new System.Drawing.Point(173, 151);
+            this.plusPessosEnvolvidas.Margin = new System.Windows.Forms.Padding(0);
+            this.plusPessosEnvolvidas.Name = "plusPessosEnvolvidas";
+            this.plusPessosEnvolvidas.Size = new System.Drawing.Size(33, 24);
+            this.plusPessosEnvolvidas.TabIndex = 11;
+            this.plusPessosEnvolvidas.UseVisualStyleBackColor = false;
+            this.plusPessosEnvolvidas.Click += new System.EventHandler(this.plusPessosEnvolvidas_Click);
             // 
             // label3
             // 
@@ -175,16 +177,16 @@ namespace TaLigado.Views
             this.label4.TabIndex = 13;
             this.label4.Text = "Frequência:";
             // 
-            // comboBoxEdit1
+            // cmbBoxFrequencia
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(12, 193);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbBoxFrequencia.Location = new System.Drawing.Point(12, 193);
+            this.cmbBoxFrequencia.Name = "cmbBoxFrequencia";
+            this.cmbBoxFrequencia.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.cmbBoxFrequencia.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbBoxFrequencia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(194, 20);
-            this.comboBoxEdit1.TabIndex = 14;
+            this.cmbBoxFrequencia.Size = new System.Drawing.Size(194, 20);
+            this.cmbBoxFrequencia.TabIndex = 14;
             // 
             // label5
             // 
@@ -204,16 +206,16 @@ namespace TaLigado.Views
             this.label6.TabIndex = 16;
             this.label6.Text = "Hora:";
             // 
-            // comboBoxEdit2
+            // cmbHora
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(12, 271);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.comboBoxEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbHora.Location = new System.Drawing.Point(12, 271);
+            this.cmbHora.Name = "cmbHora";
+            this.cmbHora.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.cmbHora.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbHora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(81, 20);
-            this.comboBoxEdit2.TabIndex = 17;
+            this.cmbHora.Size = new System.Drawing.Size(81, 20);
+            this.cmbHora.TabIndex = 17;
             // 
             // panel1
             // 
@@ -222,6 +224,7 @@ namespace TaLigado.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(30, 33);
             this.panel1.TabIndex = 18;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // label7
             // 
@@ -232,14 +235,14 @@ namespace TaLigado.Views
             this.label7.TabIndex = 20;
             this.label7.Text = "Localização:";
             // 
-            // textEdit2
+            // txtLocalizacao
             // 
-            this.textEdit2.Location = new System.Drawing.Point(12, 310);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit2.Size = new System.Drawing.Size(194, 20);
-            this.textEdit2.TabIndex = 19;
+            this.txtLocalizacao.Location = new System.Drawing.Point(12, 310);
+            this.txtLocalizacao.Name = "txtLocalizacao";
+            this.txtLocalizacao.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.txtLocalizacao.Properties.Appearance.Options.UseBackColor = true;
+            this.txtLocalizacao.Size = new System.Drawing.Size(194, 20);
+            this.txtLocalizacao.TabIndex = 19;
             // 
             // label8
             // 
@@ -252,7 +255,7 @@ namespace TaLigado.Views
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(41, 415);
+            this.simpleButton1.Location = new System.Drawing.Point(30, 415);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 22;
@@ -260,11 +263,12 @@ namespace TaLigado.Views
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(122, 415);
+            this.simpleButton2.Location = new System.Drawing.Point(111, 415);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 23;
             this.simpleButton2.Text = "Cancelar";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frmCadastrarEvento
             // 
@@ -277,35 +281,38 @@ namespace TaLigado.Views
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txtLocalizacao);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBoxEdit2);
+            this.Controls.Add(this.cmbHora);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBoxEdit1);
+            this.Controls.Add(this.cmbBoxFrequencia);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.nextMonth);
-            this.Controls.Add(this.textEdit3);
+            this.Controls.Add(this.plusPessosEnvolvidas);
+            this.Controls.Add(this.txtPessoasEnvolvidas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.checkEdit1);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.richTxtDescricao);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateEdit1);
+            this.Controls.Add(this.boxData);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "frmCadastrarEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastrarEvento";
             this.Load += new System.EventHandler(this.frmCadastrarEvento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPessoasEnvolvidas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbBoxFrequencia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHora.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLocalizacao.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,24 +320,24 @@ namespace TaLigado.Views
 
         #endregion
 
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit boxData;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.RichTextBox richTxtDescricao;
+        private DevExpress.XtraEditors.TextEdit txtTitulo;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private System.Windows.Forms.Button nextMonth;
+        private DevExpress.XtraEditors.TextEdit txtPessoasEnvolvidas;
+        private System.Windows.Forms.Button plusPessosEnvolvidas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbBoxFrequencia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbHora;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtLocalizacao;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
