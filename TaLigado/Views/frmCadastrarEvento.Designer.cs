@@ -185,6 +185,12 @@ namespace TaLigado.Views
             this.cmbBoxFrequencia.Properties.Appearance.Options.UseBackColor = true;
             this.cmbBoxFrequencia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbBoxFrequencia.Properties.Items.AddRange(new object[] {
+            "Não se repete",
+            "Todos os dias",
+            "Todas as semanas",
+            "Todos os meses",
+            "Todos os anos"});
             this.cmbBoxFrequencia.Size = new System.Drawing.Size(194, 20);
             this.cmbBoxFrequencia.TabIndex = 14;
             // 
@@ -214,6 +220,19 @@ namespace TaLigado.Views
             this.cmbHora.Properties.Appearance.Options.UseBackColor = true;
             this.cmbHora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbHora.Properties.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
             this.cmbHora.Size = new System.Drawing.Size(81, 20);
             this.cmbHora.TabIndex = 17;
             // 
@@ -260,6 +279,7 @@ namespace TaLigado.Views
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 22;
             this.simpleButton1.Text = "Confirmar";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 

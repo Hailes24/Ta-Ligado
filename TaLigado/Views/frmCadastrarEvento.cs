@@ -8,13 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaLigado.Model;
 
 namespace TaLigado.Views
 {
     public partial class frmCadastrarEvento : XtraForm
     {
-        private List<string> pessoasEnvolvidasList = new List<string>();
+        private StringBuilder pessoasEnvolvidasList = new StringBuilder();
         private string imgSource;
+        private IEvento evento;
         public frmCadastrarEvento()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace TaLigado.Views
 
         private void plusPessosEnvolvidas_Click(object sender, EventArgs e)
         {
-            pessoasEnvolvidasList.Add(txtPessoasEnvolvidas.Text);
+            pessoasEnvolvidasList.Append(txtPessoasEnvolvidas.Text + " | ");
             txtPessoasEnvolvidas.Text = string.Empty;
         }
 
@@ -45,6 +47,11 @@ namespace TaLigado.Views
                 imgSource = dialog.FileName;
                 //pictureEdit1.Image = dialog.ph
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            evento = new EventoRepository();
         }
     }
 }

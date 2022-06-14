@@ -15,22 +15,18 @@ namespace TaLigado.Model
         private SqlCommand comando;
         private SqlDataAdapter dataAdapter;
         private SqlDataReader dataReader;
-        private string strSQL, strConexao;
+        private string strConexao;
 
         public Conexao()
         {
             strConexao = @"Server=DESKTOP-HAILES\MSSQLSERVERNWA ;Database=TALIGADO ;Integrated Security=True;";
             conexao = new SqlConnection(strConexao);
         }
-        private void Insert(IEvento evento)
+        public void Insert(string query)
         {
             try
             {
-                strSQL = $"INSERT INTO eventos (titulo, frequencia, repetir, pessoas_envolvidas, localizacao, descricao, imagem, data, horas) " +
-                                    $"VALUES ('{evento.titulo}', '{evento.frequencia}', {evento.repetir}, '{evento.pessoas_envolvidas}, '{evento.localizacao}, " +
-                                    $"'{evento.descricao}', '{evento.imagem}', {evento.data}, {evento.horas})'";
-
-                comando = new SqlCommand(strSQL, conexao);
+                comando = new SqlCommand(query, conexao);
                 conexao.Open();
                 comando.ExecuteNonQuery();
             }
@@ -45,14 +41,12 @@ namespace TaLigado.Model
                 comando.Dispose();
             }
         }
-        private DataTable SelectAll(string tableName)
+        public DataTable SelectAll(string query)
         {
             DataTable dataTable = new DataTable();
             try
             {
-                conexao = new SqlConnection(@"Server=DESKTOP-HAILES\MSSQLSERVERNWA ;Database=TALIGADO ;Integrated Security=True;");
-                strSQL = $"SELECT * FROM {tableName}";
-                using (var command = new SqlCommand(strSQL, conexao))
+                using (var command = new SqlCommand(query, conexao))
                 {
                     conexao.Open();
                     dataAdapter = new SqlDataAdapter(command);
@@ -70,13 +64,11 @@ namespace TaLigado.Model
             }
             return dataTable;
         }
-        private DataTable SelectWhere(short id, string tableName)
+        public DataTable SelectWhere(string query)
         {
             try
             {
-                conexao = new SqlConnection(@"Server=DESKTOP-HAILES\MSSQLSERVERNWA ;Database=TALIGADO ;Integrated Security=True;");
-                strSQL = $"SELECT * FROM {tableName} WHERE ID = {id}";
-                comando = new SqlCommand(strSQL, conexao);
+                comando = new SqlCommand(query, conexao);
                 conexao.Open();
                 dataReader = comando.ExecuteReader();
             }
@@ -92,23 +84,11 @@ namespace TaLigado.Model
             }
             return dataReader.GetSchemaTable();
         }
-        private void Update(short id, string tableName, IEvento evento)
+        public void Update(string consulta)
         {
             try
             {
-                conexao = new SqlConnection(@"Server=DESKTOP-HAILES\MSSQLSERVERNWA ;Database=TALIGADO ;Integrated Security=True;");
-                strSQL = $"UPDATE {tableName} " +
-                                    $"SET titulo, =         {evento.titulo}," +
-                                    $"frequencia, =         {evento.frequencia}," +
-                                    $"repetir, =            {evento.repetir}," +
-                                    $"pessoas_envolvidas =  {evento.pessoas_envolvidas}," +
-                                    $"localizacao, =        {evento.localizacao}," +
-                                    $"descricao, =          {evento.descricao}," +
-                                    $"imagem, =             {evento.imagem}," +
-                                    $"data, =               {evento.data}," +
-                                    $"horas =               {evento.horas} " +
-                                    $"WHERE ID = {id}";
-                comando = new SqlCommand(strSQL, conexao);
+                comando = new SqlCommand(consulta, conexao);
                 conexao.Open();
                 comando.ExecuteNonQuery();
             }
@@ -123,13 +103,11 @@ namespace TaLigado.Model
                 comando.Dispose();
             }
         }
-        private void Delecte(short id, string tableName)
+        public void Delecte(string query)
         {
             try
             {
-                conexao = new SqlConnection(@"Server=DESKTOP-HAILES\MSSQLSERVERNWA ;Database=TALIGADO ;Integrated Security=True;");
-                strSQL = $"DELETE {tableName} WHERE ID = {id}";
-                comando = new SqlCommand(strSQL, conexao);
+                comando = new SqlCommand(query, conexao);
                 conexao.Open();
                 comando.ExecuteNonQuery();
             }
