@@ -20,14 +20,19 @@ namespace TaLigado.Model
         public DateTime data { get ; set ; }
         public int horas { get ; set ; }
 
-        public void Delecte(int id)
+        public EventoRepository()
+        {
+            conexao = new Conexao();
+        }
+
+        public void Delecte(byte id)
         {
             conexao = new Conexao();
             var query = $"DELETE eventos WHERE ID = {id}";
             conexao.Delecte(query);
         }
 
-        public DataTable GetTableEvento(bool way, int id)
+        public DataTable GetTableEvento(int id, bool way)
         {
             DataTable dados;
             conexao = new Conexao();

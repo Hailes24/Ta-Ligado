@@ -51,7 +51,13 @@ namespace TaLigado.Views
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            evento = new EventoRepository();
+            evento = new EventoRepository() {
+                titulo = txtTitulo.Text,
+                frequencia = (string)cmbBoxFrequencia.SelectedItem,
+                repetir = checkEdit1.Checked//aqui
+                
+            };
+            (new EventoRepository()).Insert(evento);
         }
     }
 }
