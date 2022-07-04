@@ -19,6 +19,8 @@ namespace TaLigado.Model
         public string imagem { get ; set ; }
         public DateTime data { get ; set ; }
         public int horas { get ; set ; }
+        public string periodo { get ; set ; }
+        public string estado { get ; set ; }
 
         public EventoRepository()
         {
@@ -48,13 +50,20 @@ namespace TaLigado.Model
             }
             return dados;
         }
+        public int GetTableEventoByEstado(string estado)
+        {
+            DataTable dados;
+            var query = $"SELECT estado FROM eventos WHERE estado = '{estado}'";
+            dados = (new Conexao()).SelectAll(query);
+            return dados.Rows.Count;
+        }
 
         public void Insert(IEvento objecto)
         {
             conexao = new Conexao();
-            var query = $"INSERT INTO eventos (titulo, frequencia, repetir, pessoas_envolvidas, localizacao, descricao, imagem, data, horas) " +
-                                    $"VALUES ('{objecto.titulo}', '{objecto.frequencia}', {objecto.repetir}, '{objecto.pessoas_envolvidas}, '{objecto.localizacao}, " +
-                                    $"'{objecto.descricao}', '{objecto.imagem}', {objecto.data}, {objecto.horas})'";
+            var query = $"INSERT INTO eventos (titulo, frequencia, repetir, pessoas_envolvidas, localizacao, descricao, imagem, data, horas, periodo, estado) " +
+                                    $"VALUES ('{objecto.titulo}', '{objecto.frequencia}', '{objecto.repetir.ToString()}', '{objecto.pessoas_envolvidas}', '{objecto.localizacao}', " +
+                                    $"'{objecto.descricao}', '{objecto.imagem}', '{objecto.data.ToString().Remove(10)}', {objecto.horas}, '{objecto.periodo}', '{objecto.estado}')";
             conexao.Insert(query);
         }
 

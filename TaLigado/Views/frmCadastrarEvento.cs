@@ -53,16 +53,25 @@ namespace TaLigado.Views
         {
             evento = new EventoRepository() {
                 titulo = txtTitulo.Text,
-                frequencia = (string)cmbBoxFrequencia.SelectedItem,
-                repetir = checkEdit1.Checked,
-                data = boxData.DateTime,
-                //horas = cmbHora.SelectedItem,
-                 = richTxtDescricao.Text,
+                descricao = richTxtDescricao.Text,
                 pessoas_envolvidas = pessoasEnvolvidasList.ToString(),
-                //aqui
-                
+                frequencia = (string)cmbBoxFrequencia.SelectedItem,
+                data = boxData.DateTime,
+                horas = cmbHora.SelectedIndex + 1,
+                periodo = panel1.BackgroundImage.Equals(Properties.Resources.icons8_partly_cloudy_day_32) ? "AM" : "PM",
+                repetir = checkEdit1.Checked,
+                localizacao = txtLocalizacao.Text,
+                imagem = imgSource,
+                estado = "Pendente"
             };
             (new EventoRepository()).Insert(evento);
+            this.Close();
+        }
+
+        private void frmCadastrarEvento_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var form = Application.OpenForms.Cast<Main>().Where(x => x.Name == "Main").FirstOrDefault();
+            form.Main_Load(sender, new EventArgs());
         }
     }
 }

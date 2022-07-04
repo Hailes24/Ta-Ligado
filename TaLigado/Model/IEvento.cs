@@ -17,5 +17,7 @@ namespace TaLigado.Model
         string imagem { get; set; }
         DateTime data { get; set; }
         int horas { get; set; }
+        string periodo { get; set; }
+        string estado { get; set; }
     }
 }

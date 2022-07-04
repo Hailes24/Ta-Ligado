@@ -323,6 +323,7 @@ namespace TaLigado.Views
             this.Name = "frmCadastrarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastrarEvento";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastrarEvento_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastrarEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties)).EndInit();
