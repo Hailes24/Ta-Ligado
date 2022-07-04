@@ -17,7 +17,7 @@ namespace TaLigado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XtraForm());
+            Application.Run(new Main());
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using TaLigado.Controles;
+using TaLigado.Model;
 
 namespace TaLigado
 {
@@ -20,7 +21,7 @@ namespace TaLigado
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        public void Main_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < 100; i++)
                 Thread.Sleep(100);
@@ -32,6 +33,17 @@ namespace TaLigado
             Preencher(dataActual.Month);
             selecionarDataActual();
             checkTime();
+
+            //grafico
+            var eventoRepository = new EventoRepository();
+            chartControl1.Series[0].LegendTextPattern = "{A}";
+            (int feitoCont, int pendenteCont, int naoFeitoCont) toGrafico = (eventoRepository.GetTableEventoByEstado("Feito"), eventoRepository.GetTableEventoByEstado("Pendente"), eventoRepository.GetTableEventoByEstado("Não Feito"));
+            chartControl1.Series[0].Points.AddPoint(argument: "Feito", value: toGrafico.feitoCont);
+            chartControl1.Series[0].Points.AddPoint(argument: "Pendentes", value: toGrafico.pendenteCont);
+            chartControl1.Series[0].Points.AddPoint(argument: "Não Feito", value: toGrafico.naoFeitoCont);
+
+            //grid
+            dataGridView1.DataSource = eventoRepository.GetTableEvento(-1, true);
         }
         private void Main_Load()
         {
@@ -117,5 +129,6 @@ namespace TaLigado
         private void pictureBox2_Click(object sender, EventArgs e) => Application.Exit();
         private void pictureBox4_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
         private void pictureBox3_Click(object sender, EventArgs e) => this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+
     }
 }

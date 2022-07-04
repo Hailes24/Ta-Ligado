@@ -29,8 +29,11 @@ namespace TaLigado
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TaLigado.SplashScreen1), true, false, true);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel1 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -41,24 +44,34 @@ namespace TaLigado
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.previusMonth = new System.Windows.Forms.Button();
-            this.nextMonth = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblAno = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblMes = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.txtDescricao = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.txtLocalizacao = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.nextMonth = new System.Windows.Forms.Button();
+            this.previusMonth = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 40;
             // 
             // flowLayoutPanel1
             // 
@@ -177,68 +190,137 @@ namespace TaLigado
             this.label7.TabIndex = 8;
             this.label7.Text = "Sábado";
             // 
-            // previusMonth
-            // 
-            this.previusMonth.BackColor = System.Drawing.Color.Black;
-            this.previusMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("previusMonth.BackgroundImage")));
-            this.previusMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.previusMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.previusMonth.FlatAppearance.BorderSize = 0;
-            this.previusMonth.Location = new System.Drawing.Point(432, 342);
-            this.previusMonth.Margin = new System.Windows.Forms.Padding(0);
-            this.previusMonth.Name = "previusMonth";
-            this.previusMonth.Size = new System.Drawing.Size(39, 28);
-            this.previusMonth.TabIndex = 9;
-            this.previusMonth.UseVisualStyleBackColor = true;
-            this.previusMonth.Click += new System.EventHandler(this.previusMonth_Click);
-            // 
-            // nextMonth
-            // 
-            this.nextMonth.BackColor = System.Drawing.Color.Black;
-            this.nextMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextMonth.BackgroundImage")));
-            this.nextMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.nextMonth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextMonth.FlatAppearance.BorderSize = 0;
-            this.nextMonth.Location = new System.Drawing.Point(525, 342);
-            this.nextMonth.Margin = new System.Windows.Forms.Padding(0);
-            this.nextMonth.Name = "nextMonth";
-            this.nextMonth.Size = new System.Drawing.Size(39, 28);
-            this.nextMonth.TabIndex = 10;
-            this.nextMonth.UseVisualStyleBackColor = true;
-            this.nextMonth.Click += new System.EventHandler(this.nextMonth_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(60, 415);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe Script", 18F);
-            this.label9.ForeColor = System.Drawing.Color.Lavender;
-            this.label9.Location = new System.Drawing.Point(19, 434);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 38);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "TáLigado";
-            // 
             // lblAno
             // 
             this.lblAno.AutoSize = true;
             this.lblAno.Font = new System.Drawing.Font("Yu Gothic UI", 36F);
             this.lblAno.ForeColor = System.Drawing.Color.White;
-            this.lblAno.Location = new System.Drawing.Point(21, 55);
+            this.lblAno.Location = new System.Drawing.Point(12, 18);
             this.lblAno.Name = "lblAno";
             this.lblAno.Size = new System.Drawing.Size(132, 65);
             this.lblAno.TabIndex = 14;
             this.lblAno.Text = "2022";
+            // 
+            // lblMes
+            // 
+            this.lblMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.lblMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblMes.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblMes.ForeColor = System.Drawing.Color.White;
+            this.lblMes.HideSelection = false;
+            this.lblMes.Location = new System.Drawing.Point(10, 79);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.ReadOnly = true;
+            this.lblMes.Size = new System.Drawing.Size(134, 28);
+            this.lblMes.TabIndex = 0;
+            this.lblMes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.flowLayoutPanel2.Controls.Add(this.pictureEdit1);
+            this.flowLayoutPanel2.Controls.Add(this.txtDescricao);
+            this.flowLayoutPanel2.Controls.Add(this.dateTimePicker1);
+            this.flowLayoutPanel2.Controls.Add(this.pictureEdit2);
+            this.flowLayoutPanel2.Controls.Add(this.txtLocalizacao);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 113);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(136, 225);
+            this.flowLayoutPanel2.TabIndex = 19;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Location = new System.Drawing.Point(3, 3);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.Appearance.Options.UseTextOptions = true;
+            this.pictureEdit1.Properties.Caption.Text = "Hailes";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(131, 84);
+            this.pictureEdit1.TabIndex = 0;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.AutoSize = true;
+            this.txtDescricao.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.ForeColor = System.Drawing.Color.White;
+            this.txtDescricao.Location = new System.Drawing.Point(3, 90);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(130, 34);
+            this.txtDescricao.TabIndex = 1;
+            this.txtDescricao.Text = "label8 ggxug xjytsey vioshugs";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 127);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(131, 20);
+            this.dateTimePicker1.TabIndex = 0;
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
+            this.pictureEdit2.Location = new System.Drawing.Point(3, 153);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pictureEdit2.Size = new System.Drawing.Size(28, 23);
+            this.pictureEdit2.TabIndex = 23;
+            // 
+            // txtLocalizacao
+            // 
+            this.txtLocalizacao.AutoSize = true;
+            this.txtLocalizacao.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalizacao.ForeColor = System.Drawing.Color.White;
+            this.txtLocalizacao.Location = new System.Drawing.Point(37, 150);
+            this.txtLocalizacao.Name = "txtLocalizacao";
+            this.txtLocalizacao.Size = new System.Drawing.Size(52, 17);
+            this.txtLocalizacao.TabIndex = 24;
+            this.txtLocalizacao.Text = "Lourem";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Red;
+            this.flowLayoutPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.flowLayoutPanel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(779, 2);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(20, 10);
+            this.flowLayoutPanel3.TabIndex = 20;
+            this.flowLayoutPanel3.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.flowLayoutPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.flowLayoutPanel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(753, 2);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(20, 10);
+            this.flowLayoutPanel4.TabIndex = 21;
+            this.flowLayoutPanel4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.Location = new System.Drawing.Point(10, 373);
+            this.chartControl1.Name = "chartControl1";
+            pieSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
+            pieSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
+            pieSeriesLabel1.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
+            series1.Label = pieSeriesLabel1;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Series 1";
+            series1.View = pieSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(136, 112);
+            this.chartControl1.TabIndex = 22;
             // 
             // button1
             // 
@@ -255,70 +337,35 @@ namespace TaLigado
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblMes
+            // nextMonth
             // 
-            this.lblMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.lblMes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblMes.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblMes.ForeColor = System.Drawing.Color.White;
-            this.lblMes.HideSelection = false;
-            this.lblMes.Location = new System.Drawing.Point(21, 116);
-            this.lblMes.Name = "lblMes";
-            this.lblMes.ReadOnly = true;
-            this.lblMes.Size = new System.Drawing.Size(115, 28);
-            this.lblMes.TabIndex = 0;
-            this.lblMes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nextMonth.BackColor = System.Drawing.Color.Black;
+            this.nextMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextMonth.BackgroundImage")));
+            this.nextMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.nextMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextMonth.FlatAppearance.BorderSize = 0;
+            this.nextMonth.Location = new System.Drawing.Point(525, 342);
+            this.nextMonth.Margin = new System.Windows.Forms.Padding(0);
+            this.nextMonth.Name = "nextMonth";
+            this.nextMonth.Size = new System.Drawing.Size(39, 28);
+            this.nextMonth.TabIndex = 10;
+            this.nextMonth.UseVisualStyleBackColor = true;
+            this.nextMonth.Click += new System.EventHandler(this.nextMonth_Click);
             // 
-            // pictureBox2
+            // previusMonth
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(93, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(64, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(37, 19);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 18;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 146);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(136, 192);
-            this.flowLayoutPanel2.TabIndex = 19;
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 40;
+            this.previusMonth.BackColor = System.Drawing.Color.Black;
+            this.previusMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("previusMonth.BackgroundImage")));
+            this.previusMonth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.previusMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previusMonth.FlatAppearance.BorderSize = 0;
+            this.previusMonth.Location = new System.Drawing.Point(432, 342);
+            this.previusMonth.Margin = new System.Windows.Forms.Padding(0);
+            this.previusMonth.Name = "previusMonth";
+            this.previusMonth.Size = new System.Drawing.Size(39, 28);
+            this.previusMonth.TabIndex = 9;
+            this.previusMonth.UseVisualStyleBackColor = true;
+            this.previusMonth.Click += new System.EventHandler(this.previusMonth_Click);
             // 
             // Main
             // 
@@ -326,15 +373,13 @@ namespace TaLigado
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(801, 495);
+            this.Controls.Add(this.chartControl1);
+            this.Controls.Add(this.flowLayoutPanel4);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblMes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblAno);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.nextMonth);
             this.Controls.Add(this.previusMonth);
             this.Controls.Add(this.label7);
@@ -356,10 +401,14 @@ namespace TaLigado
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,14 +428,17 @@ namespace TaLigado
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button previusMonth;
         private System.Windows.Forms.Button nextMonth;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblAno;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox lblMes;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private System.Windows.Forms.Label txtDescricao;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
+        private System.Windows.Forms.Label txtLocalizacao;
     }
 }

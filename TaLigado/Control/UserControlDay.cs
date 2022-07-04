@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TaLigado.Views;
 
 namespace TaLigado.Controles
 {
@@ -50,6 +51,11 @@ namespace TaLigado.Controles
                     }
                 }
             }
+        }
+
+        private void objectivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new frmCadastrarEvento()).ShowDialog();
         }
     }
 }

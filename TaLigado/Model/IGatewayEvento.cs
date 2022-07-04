@@ -10,8 +10,8 @@ namespace TaLigado.Model
     public interface IGatewayEvento <C> where C : class
     {
         void Insert(C objecto);
-        void UpDate(C objecto);
+        void UpDate(C objecto, int id);
         void Delecte(byte id);
-        DataTable GetTableEvento();
+        DataTable GetTableEvento(int id, bool way);
     }
 }
