@@ -54,7 +54,12 @@ namespace TaLigado.Views
             evento = new EventoRepository() {
                 titulo = txtTitulo.Text,
                 frequencia = (string)cmbBoxFrequencia.SelectedItem,
-                repetir = checkEdit1.Checked//aqui
+                repetir = checkEdit1.Checked,
+                data = boxData.DateTime,
+                //horas = cmbHora.SelectedItem,
+                 = richTxtDescricao.Text,
+                pessoas_envolvidas = pessoasEnvolvidasList.ToString(),
+                //aqui
                 
             };
             (new EventoRepository()).Insert(evento);
