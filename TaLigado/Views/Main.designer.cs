@@ -86,7 +86,7 @@ namespace TaLigado
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(159, 373);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(631, 112);
+            this.groupBox1.Size = new System.Drawing.Size(631, 181);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -103,7 +103,7 @@ namespace TaLigado
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(625, 93);
+            this.dataGridView1.Size = new System.Drawing.Size(625, 162);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -319,7 +319,7 @@ namespace TaLigado
             series1.View = pieSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(136, 112);
+            this.chartControl1.Size = new System.Drawing.Size(136, 178);
             this.chartControl1.TabIndex = 22;
             // 
             // button1
@@ -372,7 +372,7 @@ namespace TaLigado
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(801, 495);
+            this.ClientSize = new System.Drawing.Size(801, 566);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);

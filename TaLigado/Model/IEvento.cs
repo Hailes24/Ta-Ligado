@@ -8,6 +8,7 @@ namespace TaLigado.Model
 {
     public interface IEvento
     {
+        int Id { get; set; }
         string titulo { get; set; }
         string frequencia { get; set; }
         bool repetir { get; set; }

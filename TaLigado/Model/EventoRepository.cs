@@ -21,6 +21,7 @@ namespace TaLigado.Model
         public int horas { get ; set ; }
         public string periodo { get ; set ; }
         public string estado { get ; set ; }
+        public int Id { get ; set; }
 
         public EventoRepository()
         {
@@ -45,7 +46,7 @@ namespace TaLigado.Model
             }
             else
             {
-                var query = $"SELECT * FROM eventos WHERE ID = {id}";
+                var query = $"SELECT * FROM eventos WHERE Id = {id}";
                 dados = conexao.SelectWhere(query);
             }
             return dados;
@@ -71,17 +72,36 @@ namespace TaLigado.Model
         {
             conexao = new Conexao();
             var strSQL = $"UPDATE eventos " +
-                        $"SET titulo, =         {objecto.titulo}," +
-                        $"frequencia, =         {objecto.frequencia}," +
-                        $"repetir, =            {objecto.repetir}," +
+                        $"SET titulo =         {objecto.titulo}," +
+                        $"frequencia =         {objecto.frequencia}," +
+                        $"repetir =            {objecto.repetir}," +
                         $"pessoas_envolvidas =  {objecto.pessoas_envolvidas}," +
-                        $"localizacao, =        {objecto.localizacao}," +
-                        $"descricao, =          {objecto.descricao}," +
-                        $"imagem, =             {objecto.imagem}," +
-                        $"data, =               {objecto.data}," +
+                        $"localizacao =        {objecto.localizacao}," +
+                        $"descricao =          {objecto.descricao}," +
+                        $"imagem =             {objecto.imagem}," +
+                        $"data =               {objecto.data}," +
                         $"horas =               {objecto.horas} " +
                         $"WHERE ID = {id}";
             conexao.Update(strSQL);
+        }
+
+        public List<DataRow> GetTableEventoLIst(string data)
+        {
+            DataTable dados;
+            List<IEvento> eventodList = new List<IEvento>();
+            conexao = new Conexao();
+            var query = $"SELECT * FROM eventos WHERE data = '{data}'";
+            dados = conexao.SelectAll(query);
+            //foreach (DataRow item in dados.Rows)
+            //{
+            //    eventodList.Add(new EventoRepository()
+            //    {
+            //        Id = int.Parse(item[0].ToString()),
+
+
+            //    });
+            //}
+            return dados.AsEnumerable().ToList();
         }
     }
 }

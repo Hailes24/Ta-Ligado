@@ -36,6 +36,7 @@ namespace TaLigado
 
             //grafico
             var eventoRepository = new EventoRepository();
+            var listToday = eventoRepository.GetTableEventoLIst(dataActual.ToShortDateString());
             chartControl1.Series[0].LegendTextPattern = "{A}";
             (int feitoCont, int pendenteCont, int naoFeitoCont) toGrafico = (eventoRepository.GetTableEventoByEstado("Feito"), eventoRepository.GetTableEventoByEstado("Pendente"), eventoRepository.GetTableEventoByEstado("Não Feito"));
             chartControl1.Series[0].Points.AddPoint(argument: "Feito", value: toGrafico.feitoCont);
@@ -44,6 +45,24 @@ namespace TaLigado
 
             //grid
             dataGridView1.DataSource = eventoRepository.GetTableEvento(-1, true);
+
+            //Barra lateral actualizar
+            try {
+                pictureEdit1.Image = Bitmap.FromFile(listToday[0][7].ToString());
+                txtDescricao.Text = (string)listToday[0][6];
+                txtLocalizacao.Text = (string)listToday[0][5];
+            } catch (ArgumentOutOfRangeException) {
+                return;
+            } catch (InvalidCastException) {
+                txtDescricao.Text = listToday[0][6].ToString();
+                txtLocalizacao.Text = listToday[0][5].ToString();
+            } catch (IndexOutOfRangeException) {
+                return;
+            } catch (System.IO.FileNotFoundException err) {
+                MessageBox.Show($"A imagem não pode ser caregada:\n{err.Message}", "TaLigado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (OutOfMemoryException) {
+                MessageBox.Show($"A imagem não pode ser caregada:\n{err.Message}", "TaLigado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Main_Load()
         {
