@@ -111,7 +111,7 @@ namespace TaLigado.Views
             this.checkEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.checkEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.checkEdit1.Properties.Caption = "Repetir";
-            this.checkEdit1.Size = new System.Drawing.Size(75, 20);
+            this.checkEdit1.Size = new System.Drawing.Size(75, 19);
             this.checkEdit1.TabIndex = 4;
             // 
             // pictureEdit1
@@ -124,6 +124,7 @@ namespace TaLigado.Views
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Size = new System.Drawing.Size(194, 61);
             this.pictureEdit1.TabIndex = 6;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
             // 
             // label2

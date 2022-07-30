@@ -35,7 +35,7 @@ namespace TaLigado.Model
             conexao.Delecte(query);
         }
 
-        public DataTable GetTableEvento(int id, bool way)
+        public DataTable GetTableEvento(bool way, int id = 1)
         {
             DataTable dados;
             conexao = new Conexao();
@@ -43,6 +43,17 @@ namespace TaLigado.Model
             {
                 var query = $"SELECT * FROM eventos";
                 dados = conexao.SelectAll(query);
+                var lastCol = dados.Columns.Count - 1;
+                foreach (DataColumn col in dados.Columns)
+                    col.Caption = col.ColumnName.Replace("_", " ").ToUpper();
+                foreach (DataRow lin in dados.Rows)
+                {
+                    var valor = Convert.ToDateTime((string)lin[8]).CompareTo(Convert.ToDateTime(DateTime.Now.ToShortTimeString()));
+                    if (valor < 0 && (((string)lin[lastCol]).Trim().Equals("Pendente")))
+                    {
+                        lin[lastCol] = "Não Feito";
+                    }
+                }
             }
             else
             {

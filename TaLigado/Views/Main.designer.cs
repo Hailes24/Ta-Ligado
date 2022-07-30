@@ -306,10 +306,12 @@ namespace TaLigado
             // 
             // chartControl1
             // 
+            this.chartControl1.AppearanceNameSerializable = "Terracotta Pie";
             this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(10, 373);
             this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PaletteName = "Blue Warm";
             pieSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
             pieSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
             pieSeriesLabel1.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
