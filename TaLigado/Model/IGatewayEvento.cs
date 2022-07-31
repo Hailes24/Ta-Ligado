@@ -14,5 +14,6 @@ namespace TaLigado.Model
         void Delecte(byte id);
         DataTable GetTableEvento(bool way, int id = 1);
         List<DataRow> GetTableEventoLIst(string data);
+        List<DataRow> GetTableEventoLIst(DateTime dateTime);
     }
 }

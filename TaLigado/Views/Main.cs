@@ -38,6 +38,10 @@ namespace TaLigado
             chartControl1.Series[0].Points.Clear();
             var eventoRepository = new EventoRepository();
             var listToday = eventoRepository.GetTableEventoLIst(dataActual.ToShortDateString());
+            if (listToday.Count < 1) {
+                listToday = eventoRepository.GetTableEventoLIst(dataActual);
+                pictureEdit1.Visible = txtDescricao.Visible = txtLocalizacao.Visible = !(listToday.Count < 1);
+            }
             chartControl1.Series[0].LegendTextPattern = "{A}";
             (int feitoCont, int pendenteCont, int naoFeitoCont) toGrafico = (eventoRepository.GetTableEventoByEstado("Feito"), eventoRepository.GetTableEventoByEstado("Pendente"), eventoRepository.GetTableEventoByEstado("Não Feito"));
             chartControl1.Series[0].Points.AddPoint(argument: "Feito", value: toGrafico.feitoCont);
@@ -46,6 +50,7 @@ namespace TaLigado
 
             //grid
             dataGridView1.DataSource = eventoRepository.GetTableEvento(way: true);
+            //dataGridView1.DataSource = sqlDataSource1 as data;
 
             //Barra lateral actualizar
             try {
@@ -150,5 +155,10 @@ namespace TaLigado
         private void pictureBox4_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
         private void pictureBox3_Click(object sender, EventArgs e) => this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
 
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Guadar dados na base de dados
+            var dados = dataGridView1.DataSource as DataTable;
+        }
     }
 }
