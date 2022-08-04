@@ -106,12 +106,13 @@ namespace TaLigado.Model
         public List<DataRow> GetTableEventoLIst(DateTime dateTime)
         {
             string query = $"SELECT * FROM eventos WHERE estado = 'Pendente'";
-            DataTable dadosFiltraodos = new DataTable();
+           //DataTable dadosFiltraodos = new DataTable();
             var dados = (new Conexao()).SelectAll(query);
-            dadosFiltraodos = (from aux in dados.AsEnumerable()
-                               where Convert.ToDateTime((string)aux["data"]) > dateTime
-                               select aux).CopyToDataTable();
-            return dadosFiltraodos.AsEnumerable().ToList();
+            var dadosFiltraodos = dados.Select($"data < '{dateTime.ToShortDateString()}'", "Id DESC");
+            //dadosFiltraodos = (from aux in dados.AsEnumerable()
+             //                  where dateTime.CompareTo(Convert.ToDateTime(aux["data"])) < 0 
+              //                 select aux).CopyToDataTable();
+            return dadosFiltraodos.ToList();
         }
     }
 }

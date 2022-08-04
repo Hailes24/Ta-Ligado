@@ -319,11 +319,12 @@ namespace TaLigado.Views
             this.Controls.Add(this.richTxtDescricao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boxData);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmCadastrarEvento.IconOptions.Image")));
             this.MaximizeBox = false;
             this.Name = "frmCadastrarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadastrarEvento";
+            this.Text = "Novo Evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastrarEvento_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastrarEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties.CalendarTimeProperties)).EndInit();

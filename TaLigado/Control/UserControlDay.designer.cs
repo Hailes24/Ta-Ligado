@@ -103,6 +103,7 @@ namespace TaLigado.Controles
             // eventoToolStripMenuItem
             // 
             this.eventoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.eventoToolStripMenuItem.Enabled = false;
             this.eventoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.eventoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eventoToolStripMenuItem.Image")));
             this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
@@ -112,6 +113,7 @@ namespace TaLigado.Controles
             // lembreteToolStripMenuItem
             // 
             this.lembreteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.lembreteToolStripMenuItem.Enabled = false;
             this.lembreteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lembreteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lembreteToolStripMenuItem.Image")));
             this.lembreteToolStripMenuItem.Name = "lembreteToolStripMenuItem";
@@ -121,6 +123,7 @@ namespace TaLigado.Controles
             // tarefaToolStripMenuItem
             // 
             this.tarefaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.tarefaToolStripMenuItem.Enabled = false;
             this.tarefaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.tarefaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tarefaToolStripMenuItem.Image")));
             this.tarefaToolStripMenuItem.Name = "tarefaToolStripMenuItem";
@@ -145,7 +148,7 @@ namespace TaLigado.Controles
             this.todosEventosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.todosEventosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("todosEventosToolStripMenuItem.Image")));
             this.todosEventosToolStripMenuItem.Name = "todosEventosToolStripMenuItem";
-            this.todosEventosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.todosEventosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.todosEventosToolStripMenuItem.Text = "Todos";
             // 
             // selecionarToolStripMenuItem
@@ -154,7 +157,7 @@ namespace TaLigado.Controles
             this.selecionarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.selecionarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("selecionarToolStripMenuItem.Image")));
             this.selecionarToolStripMenuItem.Name = "selecionarToolStripMenuItem";
-            this.selecionarToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.selecionarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.selecionarToolStripMenuItem.Text = "Selecionar";
             // 
             // visualizarToolStripMenuItem
@@ -183,19 +186,21 @@ namespace TaLigado.Controles
             // diaToolStripMenuItem
             // 
             this.diaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.diaToolStripMenuItem.Enabled = false;
             this.diaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.diaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("diaToolStripMenuItem.Image")));
             this.diaToolStripMenuItem.Name = "diaToolStripMenuItem";
-            this.diaToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.diaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diaToolStripMenuItem.Text = "Diario";
             // 
             // mêsToolStripMenuItem
             // 
             this.mêsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.mêsToolStripMenuItem.Enabled = false;
             this.mêsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.mêsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mêsToolStripMenuItem.Image")));
             this.mêsToolStripMenuItem.Name = "mêsToolStripMenuItem";
-            this.mêsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.mêsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mêsToolStripMenuItem.Text = "Semenal";
             // 
             // anoToolStripMenuItem
@@ -204,7 +209,7 @@ namespace TaLigado.Controles
             this.anoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.anoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("anoToolStripMenuItem.Image")));
             this.anoToolStripMenuItem.Name = "anoToolStripMenuItem";
-            this.anoToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.anoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.anoToolStripMenuItem.Text = "Mensal";
             // 
             // anoToolStripMenuItem1
@@ -213,7 +218,7 @@ namespace TaLigado.Controles
             this.anoToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.anoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("anoToolStripMenuItem1.Image")));
             this.anoToolStripMenuItem1.Name = "anoToolStripMenuItem1";
-            this.anoToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.anoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.anoToolStripMenuItem1.Text = "Anual";
             // 
             // UserControlDay
