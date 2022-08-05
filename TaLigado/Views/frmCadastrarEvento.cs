@@ -17,6 +17,7 @@ namespace TaLigado.Views
         private StringBuilder pessoasEnvolvidasList = new StringBuilder();
         private string imgSource;
         private IEvento evento;
+        private bool periodo;
         public frmCadastrarEvento()
         {
             InitializeComponent();
@@ -29,7 +30,11 @@ namespace TaLigado.Views
 
         private void simpleButton2_Click(object sender, EventArgs e) => this.Close();
 
-        private void panel1_Click(object sender, EventArgs e) => panel1.BackgroundImage = panel1.BackgroundImage.Equals(Properties.Resources.icons8_partly_cloudy_day_32) ? Properties.Resources.icons8_night_32 : Properties.Resources.icons8_partly_cloudy_day_32;
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            panel1.BackgroundImage = periodo ? Properties.Resources.icons8_partly_cloudy_day_32 : Properties.Resources.icons8_night_32;
+            periodo = !periodo;
+        }
 
         private void plusPessosEnvolvidas_Click(object sender, EventArgs e)
         {
@@ -45,7 +50,7 @@ namespace TaLigado.Views
             if (dialogResult == DialogResult.OK)
             {
                 imgSource = dialog.FileName;
-                //pictureEdit1.Image = dialog.ph
+                pictureEdit1.Image = Bitmap.FromFile(imgSource);
             }
         }
 
@@ -72,6 +77,11 @@ namespace TaLigado.Views
         {
             var form = Application.OpenForms.Cast<Main>().Where(x => x.Name == "Main").FirstOrDefault();
             form.Main_Load(sender, new EventArgs());
+        }
+
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

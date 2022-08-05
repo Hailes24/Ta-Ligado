@@ -12,7 +12,8 @@ namespace TaLigado.Model
         void Insert(C objecto);
         void UpDate(C objecto, int id);
         void Delecte(byte id);
-        DataTable GetTableEvento(int id, bool way);
+        DataTable GetTableEvento(bool way, int id = 1);
         List<DataRow> GetTableEventoLIst(string data);
+        List<DataRow> GetTableEventoLIst(DateTime dateTime);
     }
 }

@@ -111,7 +111,7 @@ namespace TaLigado.Views
             this.checkEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.checkEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.checkEdit1.Properties.Caption = "Repetir";
-            this.checkEdit1.Size = new System.Drawing.Size(75, 20);
+            this.checkEdit1.Size = new System.Drawing.Size(75, 19);
             this.checkEdit1.TabIndex = 4;
             // 
             // pictureEdit1
@@ -124,6 +124,7 @@ namespace TaLigado.Views
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Size = new System.Drawing.Size(194, 61);
             this.pictureEdit1.TabIndex = 6;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
             // 
             // label2
@@ -318,11 +319,12 @@ namespace TaLigado.Views
             this.Controls.Add(this.richTxtDescricao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boxData);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmCadastrarEvento.IconOptions.Image")));
             this.MaximizeBox = false;
             this.Name = "frmCadastrarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadastrarEvento";
+            this.Text = "Novo Evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastrarEvento_FormClosing);
             this.Load += new System.EventHandler(this.frmCadastrarEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.boxData.Properties.CalendarTimeProperties)).EndInit();

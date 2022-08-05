@@ -182,19 +182,19 @@
   <data name="agendarToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVDhPrZJrSNNRGMb/kZfazcu8zabTpItEH/oWWt9k
-        pKhgQdZMRTNCKyHKhNBE834rrbTlpdQp6qZTkvJGaVZIxqgYXjY35zY3LwRGrojKp/PXPwgt6kvPp3M4
-        7+/hfd73UP9VIW8+7QudWEtgrnYib4l0DXP9TddUes8yFYLb9die/gIOF0fgmDYMp/P9cD7Xhx1JPTjQ
-        Mgnf7AGw4lp0DLWlbRnvwLo+Du+yt8RgbNMglTFIIQbJSgjzhuGWJgdbIgODbYlXPA1ugRrcvPfg5KjA
-        zZoAhxhyMl+BkzEK9uXnYKcPgn2hH6zUJ/YGe+SLCGq3IkBmgV+TGbsaTPCRzsOrxgB+tR6ut3TglWnB
-        LtZgZ/6MvUFQhxWBrRb4Ny9A2GjCsPErIrqtCJdbMDhnA698FtkjK8h6tgLnvCl7g8A2C0QtBH5ogm+d
-        EUqtDWICh7UvQDH9GdxSLTKGlnFlYAmOOZP2BgEEjuxbRnjP4kbriU+XsL9+HnulBkh6LGAXaRDaYMDh
-        B3NwuPEHA3+Su1dvg3LWtpH7xzqQ8HgRcb3WjTMrX43kvmaIFYVwLy/B7s54fwbdFJ1bQFr3qjXA4+4c
-        3G7r4EJyc0o0YN1Uk6FeRYDiLEQdSfBrS4Cg6cyqV6PkIINTlG+9Ed0kd5dmDe5Venz/uY7TSgtiFQuo
-        GJdD1EmDiVDoXkLwSAKfhlh4SE8MMjhF0bmPkoEdaTXDtVKHqA4zRFU6CCu1CJbmQiiLx5BJheUvqxg1
-        f4C4KxPu1dGrDE5RnjUGI/8OaZ3eN906ve+CGTjlToFXWAifxlPwrjuJXt1r8O/FwK06mtRFqBn87/K4
-        HyfwrD3+kV8TgxDZJfKpImmYbEYsYUr+LZeq6EO8yqgxXkX4N1bpMS2rKCyFoijqF2D/opg/QSChAAAA
-        AElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVDhPrZJrSNNRGMb/kZfazcu8zabTpItEH/oWWt9k
+        qKggQdZMRTNCKyHKhNBE834rrVbLS6lT1E2nJOWN0qyQLKkYXjY35zY3LwRGrojKp/PXPwgt6kvPp3M4
+        5/e873PeQ/1Xhbz+tC90fC2R2dqJnCXRd5jtb7ryVu9ZPoHgNj22ZzyHw/lhOKYPwelsH5zP9GJHcjcO
+        NE/CN6cfrPgmHUNtaVvmO7CujsG7/A0xGN00SGMMUolBigrC/CG4pSvAlsjBYFvilUyDW6gGN/89OLkT
+        4GaPg0MMOVkvwckcAfviM7AzBsA+1wdW2mN7gz2KRQS1WREgt8Cv0Yxd9Sb4yObhJTWAX6OH6w0deOVa
+        sEs02FkwY28Q1G5FYIsF/k0LEDaYMGT8isguKyIUFgzM2cCrmEXO8Aqyn67AOX/K3iCw1QJRM4EfmOBb
+        a4RKa4OYwGFtC1BOfwa3TIvMwWVc6l+CY+6kvUEAgaN6lxHRvbjRetKTJeyvm8demQGSbgvYxRqE1htw
+        +P4cHK79wcCf5O7R26CatW3k/rEOJD5aRHyPdWPNKlAjpbcJYmUR3CtKsbsjwZ9BN0XnFpDWve4a4HF7
+        Dm43dXAhuTmlGrCuq8mjXkaA8jRE7cnwa02EoPHUqleD5CCDU5RvnRFdJHenZg3u1Xp8/7mOkyoL4pQL
+        qBxTQNRBg0lQ6l5A8FACn/o4eMiODTA4RdG5j5IHO9JihmuVDtHtZoiqdRBWaREsy4NQnoBB0wSWv6xi
+        xPwB4s4sUih6lcEpylNqMPJvkdbpedOt0/MunIFT3hR4RUXwaTgB79rj6NG9Av9OLNxqYsi/iFQz+N/l
+        cS9e4CmN/ciXxiJEfoF8qihSJJJMRixhrvxbLtUxh3hV0aO8yvBvrLJwLas4LJWiKOoXV1iikMqV488A
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="todosEventosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

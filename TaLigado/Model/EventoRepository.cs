@@ -35,14 +35,25 @@ namespace TaLigado.Model
             conexao.Delecte(query);
         }
 
-        public DataTable GetTableEvento(int id, bool way)
+        public DataTable GetTableEvento(bool way, int id = 1)
         {
             DataTable dados;
             conexao = new Conexao();
             if (way)
             {
-                var query = $"SELECT * FROM eventos";
+                var query = $"SELECT * FROM eventos ORDER BY Id DESC";
                 dados = conexao.SelectAll(query);
+                var lastCol = dados.Columns.Count - 1;
+                foreach (DataColumn col in dados.Columns)
+                    col.Caption = col.ColumnName.Replace("_", " ").ToUpper();
+                foreach (DataRow lin in dados.Rows)
+                {
+                    var valor = Convert.ToDateTime((string)lin[8]).CompareTo(Convert.ToDateTime(DateTime.Now.ToShortTimeString()));
+                    if (valor < 0 && (((string)lin[lastCol]).Trim().Equals("Pendente")))
+                    {
+                        lin[lastCol] = "Não Feito";
+                    }
+                }
             }
             else
             {
@@ -87,21 +98,21 @@ namespace TaLigado.Model
 
         public List<DataRow> GetTableEventoLIst(string data)
         {
-            DataTable dados;
-            List<IEvento> eventodList = new List<IEvento>();
-            conexao = new Conexao();
-            var query = $"SELECT * FROM eventos WHERE data = '{data}'";
-            dados = conexao.SelectAll(query);
-            //foreach (DataRow item in dados.Rows)
-            //{
-            //    eventodList.Add(new EventoRepository()
-            //    {
-            //        Id = int.Parse(item[0].ToString()),
-
-
-            //    });
-            //}
+            var query = $"SELECT * FROM eventos WHERE data = '{data}' AND estado = 'Pendente'";
+            var dados = (new Conexao()).SelectAll(query);
             return dados.AsEnumerable().ToList();
+        }
+
+        public List<DataRow> GetTableEventoLIst(DateTime dateTime)
+        {
+            string query = $"SELECT * FROM eventos WHERE estado = 'Pendente'";
+           //DataTable dadosFiltraodos = new DataTable();
+            var dados = (new Conexao()).SelectAll(query);
+            var dadosFiltraodos = dados.Select($"data < '{dateTime.ToShortDateString()}'", "Id DESC");
+            //dadosFiltraodos = (from aux in dados.AsEnumerable()
+             //                  where dateTime.CompareTo(Convert.ToDateTime(aux["data"])) < 0 
+              //                 select aux).CopyToDataTable();
+            return dadosFiltraodos.ToList();
         }
     }
 }

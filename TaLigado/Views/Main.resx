@@ -190,4 +190,10 @@
         BBJGD9wYGvwswkJHFsrt3dPifbB8kf8kFvsNzmOfQpNOtNsAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>194, 17</value>
+  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9ImV2ZW50b3MiPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InRpdHVsbyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJmcmVxdWVuY2lhIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InJlcGV0aXIiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9InBlc3NvYXNfZW52b2x2aWRhcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJsb2NhbGl6YWNhbyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkZXNjcmljYW8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iaW1hZ2VtIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImRhdGEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iaG9yYXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icGVyaW9kbyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJlc3RhZG8iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
 </root>

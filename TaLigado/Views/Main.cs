@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Threading;
 using TaLigado.Controles;
 using TaLigado.Model;
+using System.Media;
 
 namespace TaLigado
 {
@@ -16,6 +17,8 @@ namespace TaLigado
     {
         private DateTime dataActual;
         private byte contMonth = 0;
+        private string path = @"Alarme/";
+        SoundPlayer som = new SoundPlayer();
         public Main()
         {
             InitializeComponent();
@@ -35,8 +38,19 @@ namespace TaLigado
             checkTime();
 
             //grafico
+            chartControl1.Series[0].Points.Clear();
             var eventoRepository = new EventoRepository();
             var listToday = eventoRepository.GetTableEventoLIst(dataActual.ToShortDateString());
+            if (listToday.Count < 1) {
+                listToday = eventoRepository.GetTableEventoLIst(dataActual);
+                pictureEdit1.Visible = txtDescricao.Visible = txtLocalizacao.Visible = !(listToday.Count < 1);
+            } else {
+                var checkPath = System.IO.Path.Combine(path, "teste.wav");
+                if (System.IO.File.Exists(checkPath)) {
+                    som = new SoundPlayer(checkPath);
+                    som.Play();
+                }
+            }
             chartControl1.Series[0].LegendTextPattern = "{A}";
             (int feitoCont, int pendenteCont, int naoFeitoCont) toGrafico = (eventoRepository.GetTableEventoByEstado("Feito"), eventoRepository.GetTableEventoByEstado("Pendente"), eventoRepository.GetTableEventoByEstado("Não Feito"));
             chartControl1.Series[0].Points.AddPoint(argument: "Feito", value: toGrafico.feitoCont);
@@ -44,11 +58,12 @@ namespace TaLigado
             chartControl1.Series[0].Points.AddPoint(argument: "Não Feito", value: toGrafico.naoFeitoCont);
 
             //grid
-            dataGridView1.DataSource = eventoRepository.GetTableEvento(-1, true);
+            dataGridView1.DataSource = eventoRepository.GetTableEvento(way: true);
+            //dataGridView1.DataSource = sqlDataSource1 as data;
 
             //Barra lateral actualizar
             try {
-                pictureEdit1.Image = Bitmap.FromFile(listToday[0][7].ToString());
+                pictureEdit1.Image = Bitmap.FromFile((string)listToday[0][7]);
                 txtDescricao.Text = (string)listToday[0][6];
                 txtLocalizacao.Text = (string)listToday[0][5];
             } catch (ArgumentOutOfRangeException) {
@@ -60,7 +75,7 @@ namespace TaLigado
                 return;
             } catch (System.IO.FileNotFoundException err) {
                 MessageBox.Show($"A imagem não pode ser caregada:\n{err.Message}", "TaLigado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } catch (OutOfMemoryException) {
+            } catch (OutOfMemoryException err) {
                 MessageBox.Show($"A imagem não pode ser caregada:\n{err.Message}", "TaLigado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -149,5 +164,12 @@ namespace TaLigado
         private void pictureBox4_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
         private void pictureBox3_Click(object sender, EventArgs e) => this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
 
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Guadar dados na base de dados
+            //var dados = dataGridView1.DataSource as DataTable;
+            som.Stop();
+            som.Dispose();
+        }
     }
 }

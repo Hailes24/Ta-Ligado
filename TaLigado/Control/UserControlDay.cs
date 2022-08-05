@@ -36,12 +36,12 @@ namespace TaLigado.Controles
                 var form = Application.OpenForms["Main"] as Main;
                 foreach (Control item in form.flowLayoutPanel1.Controls)
                 {
-                    if (item.GetType().Equals(((UserControlDay)sender).GetType()))
+                    if (item.GetType().Equals(obj.GetType()))
                     {
                         if (item.Equals(obj))
                         {
-                            ((UserControlDay)sender).BackColor = varCorII;
-                            ((UserControlDay)sender).label1.ForeColor = varCor;
+                            obj.BackColor = varCorII;
+                            obj.label1.ForeColor = varCor;
                         }
                         else
                         {
