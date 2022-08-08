@@ -48,7 +48,9 @@ namespace TaLigado.Controles
             this.anoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -228,16 +230,30 @@ namespace TaLigado.Controles
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(63, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // UserControlDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "UserControlDay";
-            this.Size = new System.Drawing.Size(85, 42);
+            this.Size = new System.Drawing.Size(83, 40);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UserControlDay_MouseClick);
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +278,6 @@ namespace TaLigado.Controles
         private System.Windows.Forms.ToolStripMenuItem anoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anoToolStripMenuItem1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

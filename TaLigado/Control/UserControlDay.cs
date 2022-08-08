@@ -13,10 +13,13 @@ namespace TaLigado.Controles
     public partial class UserControlDay : UserControl
     {
         public (byte dia, byte mes, short ano) data;
+        public DateTime dataTime;
         public UserControlDay(byte day, byte month, short year)
         {
             InitializeComponent();
             data = (day, month, year);
+            dataTime = new DateTime(data.ano, data.mes, data.dia);
+            pictureBox1.Visible = (new EventoRepository()).GetTableEventoLIst(dataTime.ToShortDateString()).Count > 0? true: false;
         }
         public UserControl setDay(byte day)
         {
@@ -43,8 +46,7 @@ namespace TaLigado.Controles
                         {
                             obj.BackColor = varCorII;
                             obj.label1.ForeColor = varCor;
-                            var date = (new DateTime(data.ano, data.mes, data.dia)).ToShortDateString();
-                            var dados = (new EventoRepository()).GetTableEventoLIst(date);
+                            var dados = (new EventoRepository()).GetTableEventoLIst(dataTime.ToShortDateString());
                             if (dados.Count > 0)
                                 notifyIcon1.ShowBalloonTip(2, (string)dados[0]["titulo"], (string)dados[0]["Descricao"], ToolTipIcon.Info);
                         }
