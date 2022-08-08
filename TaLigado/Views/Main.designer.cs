@@ -32,12 +32,12 @@ namespace TaLigado
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TaLigado.SplashScreen1), true, false, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel3 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView3 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.DataAccess.Sql.SelectQuery selectQuery3 = new DevExpress.DataAccess.Sql.SelectQuery();
-            DevExpress.DataAccess.Sql.AllColumns allColumns3 = new DevExpress.DataAccess.Sql.AllColumns();
-            DevExpress.DataAccess.Sql.Table table3 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel2 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView2 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery2 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.AllColumns allColumns2 = new DevExpress.DataAccess.Sql.AllColumns();
+            DevExpress.DataAccess.Sql.Table table2 = new DevExpress.DataAccess.Sql.Table();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -69,9 +69,9 @@ namespace TaLigado
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).BeginInit();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -82,7 +82,7 @@ namespace TaLigado
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(159, 47);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(631, 291);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(652, 291);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
@@ -91,10 +91,10 @@ namespace TaLigado
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(159, 373);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(631, 181);
+            this.groupBox1.Size = new System.Drawing.Size(652, 181);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Visualização";
             // 
             // dataGridView1
             // 
@@ -109,7 +109,7 @@ namespace TaLigado
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(625, 162);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 162);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -118,7 +118,7 @@ namespace TaLigado
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(162, 18);
+            this.label1.Location = new System.Drawing.Point(162, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 30);
             this.label1.TabIndex = 2;
@@ -130,7 +130,7 @@ namespace TaLigado
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(256, 18);
+            this.label2.Location = new System.Drawing.Point(263, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 30);
             this.label2.TabIndex = 3;
@@ -142,7 +142,7 @@ namespace TaLigado
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(354, 18);
+            this.label3.Location = new System.Drawing.Point(363, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 30);
             this.label3.TabIndex = 4;
@@ -154,7 +154,7 @@ namespace TaLigado
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(441, 18);
+            this.label4.Location = new System.Drawing.Point(442, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 30);
             this.label4.TabIndex = 5;
@@ -166,7 +166,7 @@ namespace TaLigado
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(531, 18);
+            this.label5.Location = new System.Drawing.Point(540, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 30);
             this.label5.TabIndex = 6;
@@ -178,7 +178,7 @@ namespace TaLigado
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(621, 18);
+            this.label6.Location = new System.Drawing.Point(633, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 30);
             this.label6.TabIndex = 7;
@@ -190,7 +190,7 @@ namespace TaLigado
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(717, 18);
+            this.label7.Location = new System.Drawing.Point(717, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 30);
             this.label7.TabIndex = 8;
@@ -318,15 +318,15 @@ namespace TaLigado
             this.chartControl1.Location = new System.Drawing.Point(10, 373);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteName = "Blue Warm";
-            pieSeriesLabel3.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            pieSeriesLabel3.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
-            pieSeriesLabel3.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
-            series3.Label = pieSeriesLabel3;
-            series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.Name = "Series 1";
-            series3.View = pieSeriesView3;
+            pieSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
+            pieSeriesLabel2.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
+            pieSeriesLabel2.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
+            series2.Label = pieSeriesLabel2;
+            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.Name = "Series 1";
+            series2.View = pieSeriesView2;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
+        series2};
             this.chartControl1.Size = new System.Drawing.Size(136, 178);
             this.chartControl1.TabIndex = 22;
             // 
@@ -379,14 +379,14 @@ namespace TaLigado
             // 
             this.sqlDataSource1.ConnectionName = "localhost_TALIGADO_Connection";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            table3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"303\" />";
-            table3.Name = "eventos";
-            allColumns3.Table = table3;
-            selectQuery3.Columns.Add(allColumns3);
-            selectQuery3.Name = "eventos";
-            selectQuery3.Tables.Add(table3);
+            table2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"303\" />";
+            table2.Name = "eventos";
+            allColumns2.Table = table2;
+            selectQuery2.Columns.Add(allColumns2);
+            selectQuery2.Name = "eventos";
+            selectQuery2.Tables.Add(table2);
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            selectQuery3});
+            selectQuery2});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // Main
@@ -394,7 +394,7 @@ namespace TaLigado
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(801, 566);
+            this.ClientSize = new System.Drawing.Size(823, 566);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -428,9 +428,9 @@ namespace TaLigado
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

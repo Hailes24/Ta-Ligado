@@ -9,7 +9,7 @@ namespace TaLigado.Model
 {
     public class EventoRepository : IEvento, IGatewayEvento<IEvento>
     {
-        private Conexao conexao;
+        private Conexao conexao { get => new Conexao(); }
         public string titulo { get ; set ; }
         public string frequencia { get ; set ; }
         public bool repetir { get ; set ; }
@@ -25,12 +25,12 @@ namespace TaLigado.Model
 
         public EventoRepository()
         {
-            conexao = new Conexao();
+            //conexao = this.conexao;
         }
 
         public void Delecte(byte id)
         {
-            conexao = new Conexao();
+            //conexao = new Conexao();
             var query = $"DELETE eventos WHERE ID = {id}";
             conexao.Delecte(query);
         }
@@ -38,7 +38,7 @@ namespace TaLigado.Model
         public DataTable GetTableEvento(bool way, int id = 1)
         {
             DataTable dados;
-            conexao = new Conexao();
+            //conexao = new Conexao();
             if (way)
             {
                 var query = $"SELECT * FROM eventos ORDER BY Id DESC";
@@ -72,7 +72,7 @@ namespace TaLigado.Model
 
         public void Insert(IEvento objecto)
         {
-            conexao = new Conexao();
+            //conexao = new Conexao();
             var query = $"INSERT INTO eventos (titulo, frequencia, repetir, pessoas_envolvidas, localizacao, descricao, imagem, data, horas, periodo, estado) " +
                                     $"VALUES ('{objecto.titulo}', '{objecto.frequencia}', '{objecto.repetir.ToString()}', '{objecto.pessoas_envolvidas}', '{objecto.localizacao}', " +
                                     $"'{objecto.descricao}', '{objecto.imagem}', '{objecto.data.ToString().Remove(10)}', {objecto.horas}, '{objecto.periodo}', '{objecto.estado}')";
@@ -81,7 +81,7 @@ namespace TaLigado.Model
 
         public void UpDate(IEvento objecto, int id)
         {
-            conexao = new Conexao();
+            //conexao = new Conexao();
             var strSQL = $"UPDATE eventos " +
                         $"SET titulo =         {objecto.titulo}," +
                         $"frequencia =         {objecto.frequencia}," +
@@ -96,10 +96,16 @@ namespace TaLigado.Model
             conexao.Update(strSQL);
         }
 
+        public List<DataRow> GetTableEventoByDate(string data)
+        {
+            var query = $"SELECT titulo, descricao FROM eventos WHERE data = '{data}'";
+            var dados = conexao.SelectAll(query);
+            return dados.AsEnumerable().ToList();
+        }
         public List<DataRow> GetTableEventoLIst(string data)
         {
             var query = $"SELECT * FROM eventos WHERE data = '{data}' AND estado = 'Pendente'";
-            var dados = (new Conexao()).SelectAll(query);
+            var dados = conexao.SelectAll(query);
             return dados.AsEnumerable().ToList();
         }
 
@@ -107,7 +113,7 @@ namespace TaLigado.Model
         {
             string query = $"SELECT * FROM eventos WHERE estado = 'Pendente'";
            //DataTable dadosFiltraodos = new DataTable();
-            var dados = (new Conexao()).SelectAll(query);
+            var dados = conexao.SelectAll(query);
             var dadosFiltraodos = dados.Select($"data < '{dateTime.ToShortDateString()}'", "Id DESC");
             //dadosFiltraodos = (from aux in dados.AsEnumerable()
              //                  where dateTime.CompareTo(Convert.ToDateTime(aux["data"])) < 0 

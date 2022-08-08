@@ -15,5 +15,6 @@ namespace TaLigado.Model
         DataTable GetTableEvento(bool way, int id = 1);
         List<DataRow> GetTableEventoLIst(string data);
         List<DataRow> GetTableEventoLIst(DateTime dateTime);
+        List<DataRow> GetTableEventoByDate(string data);
     }
 }

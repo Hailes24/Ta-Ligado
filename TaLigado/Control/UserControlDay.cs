@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TaLigado.Model;
 using TaLigado.Views;
 
 namespace TaLigado.Controles
@@ -42,6 +43,10 @@ namespace TaLigado.Controles
                         {
                             obj.BackColor = varCorII;
                             obj.label1.ForeColor = varCor;
+                            var date = (new DateTime(data.ano, data.mes, data.dia)).ToShortDateString();
+                            var dados = (new EventoRepository()).GetTableEventoLIst(date);
+                            if (dados.Count > 0)
+                                notifyIcon1.ShowBalloonTip(2, (string)dados[0]["titulo"], (string)dados[0]["Descricao"], ToolTipIcon.Info);
                         }
                         else
                         {
